@@ -25,11 +25,9 @@ const itemImg = images.map(
   ({ url, alt }) =>
     `<li class="item">
     <img 
-      url = " ${url} " 
+      src = " ${url} " 
       alt = " ${alt} " 
-     />>
+     /
    </li>`
 );
 imgGalllery.insertAdjacentHTML('beforeend', itemImg);
-
-
