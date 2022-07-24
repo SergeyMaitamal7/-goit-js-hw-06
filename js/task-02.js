@@ -14,9 +14,10 @@ const ingredients = [
 // После чего вставит все <li> за одну операцию в список ul#ingredients.
 
 const ul = document.querySelector('#ingredients');
-for (let i = 0; i < ingredients.length; i += 1) {
+const create = ingredients.map((el)=> {
   const createLi = document.createElement('li');
-  createLi.textContent = ingredients[i];
+  createLi.textContent = el;
   createLi.classList.add('item');
-  ul.append(createLi);
-}
+return createLi
+})
+ul.append(...create);
